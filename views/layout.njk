@@ -4,7 +4,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{item.title}}</title>
+
+    {% block head %}
+      <title>Gym Manager</title>
+    {% endblock %}
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
@@ -14,11 +17,10 @@
   <body>
     <header>
       <div class="links">
-        <a href="/">Sobre</a>
-        <a href="/aulas">Aulas</a>
+        <a href="/" class="active">Instrutores</a>
+        <a href="/membros">Membros</a>
       </div>
     </header>
-
     {% block content %}
 
       {% endblock%}
